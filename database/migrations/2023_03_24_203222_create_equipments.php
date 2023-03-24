@@ -14,10 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('equipments', function (Blueprint $table) {
-            $table->id();
+            $table->id('eqm_id');
             $table->string('eqm_name');
-            $table->string('eqm_');
+            $table->string('eqm_serial_number');    
+            $table->string('eqm_picture');        
+            $table->unsignedbiginteger('eqm_emp_id');       
             $table->timestamps();
+
+            $table->foreign('eqm_emp_id')->references('emp_id')->on('users');
+
         });
     }
 

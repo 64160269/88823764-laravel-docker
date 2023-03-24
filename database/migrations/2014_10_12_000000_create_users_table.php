@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->id('emp_id');
             $table->string('fname');
             $table->string('lname');
             $table->string('email')->unique();
@@ -22,9 +22,11 @@ return new class extends Migration
             $table->string('password');
             $table->string('gender');
             $table->string('picture');
-            $table->unsignedbiginteger('dep_id');
+            $table->unsignedbiginteger('emp_dep_id');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('emp_dep_id')->references('dep_id')->on('departments');
         });
     }
 

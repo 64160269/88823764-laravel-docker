@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('departments', function (Blueprint $table) {
-            $table->id('dep_id');
-            $table->string('role');
+        Schema::create('stock_details', function (Blueprint $table) {
+            $table->id('sd_id');
+            $table->string('sd_name');
+            $table->string('sd_serial_number');
+            $table->unsignedbiginteger('sd_stk_id');
             $table->timestamps();
+            $table->foreign('sd_stk_id')->references('stk_id')->on('stocks');
+
         });
     }
 
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departments');
+        Schema::dropIfExists('stock_details');
     }
 };
