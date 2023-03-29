@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/Home', function () {
+    return view('Home');
 });
+
+// Route::post('/Show', function (Request $request) {
+//     $email = $request->email;
+//     $password = $request->pass;
+//     return view('Show', ['email' => $email, 'pass' => $password]);
+// })-> name("Show");
+
