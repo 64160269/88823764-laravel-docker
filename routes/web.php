@@ -16,9 +16,10 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
+HEAD
 Route::post('/Show', [HomeController::class,'show_home'])->name('Show');
 
 // Route::post('/Show', function (Request $request) {
