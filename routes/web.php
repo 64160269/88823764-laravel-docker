@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
+
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +15,11 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/Home', function () {
-    return view('Home');
+Route::get('/', function () {
+    return view('welcome');
 });
+
+Route::post('/Show', [HomeController::class,'show_home'])->name('Show');
 
 // Route::post('/Show', function (Request $request) {
 //     $email = $request->email;
