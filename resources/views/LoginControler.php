@@ -9,13 +9,12 @@ class LoginControler extends Controller
     public function login()
     {
     
-            if(Auth::User()->id == "1"){
+            if(Auth::User()->emp_dep_id == 1){
                 return view('homemanager'); 
-            }else if(Auth::User()->id == "2"){
+            }else if(Auth::User()->emp_dep_id == 2){
                 return view('homesup');
-            }else if(Auth::User()->id == "3"){
+            }else if(Auth::User()->emp_dep_id == 3){
                 return view('home');
             }
-        
     }
 }

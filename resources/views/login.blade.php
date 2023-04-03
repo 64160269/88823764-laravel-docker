@@ -31,7 +31,7 @@
             <div class="login-text">
                 Log in
             </div>
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{route('login')}}">
                 @csrf
                 <div class="username">
                     <br>Email<br>
