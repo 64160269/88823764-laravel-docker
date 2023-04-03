@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +19,14 @@ Route::get('/', function () {
     return view('login');
 });
 
-Auth::routes();
+Route::post('/Show', [HomeController::class,'show_home'])->name('Show');
+
+// Route::post('/Show', function (Request $request) {
+//     $email = $request->email;
+//     $password = $request->pass;
+//     return view('Show', ['email' => $email, 'pass' => $password]);
+// })-> name("Show");
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route::post('/login', [App\Http\Controllers\ConnectController::class, 'connect'])->name('connect');
-

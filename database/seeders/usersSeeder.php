@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
+use App\Models\userModel;
 
 class usersSeeder extends Seeder
 {
@@ -127,9 +127,9 @@ class usersSeeder extends Seeder
             ],
         ];
 
-                foreach($users as $User)
+                foreach($users as $userModel)
             {
-                DB::table('users')->insert($User);
+                DB::table('users')->insert($userModel);
             }
     }
 }

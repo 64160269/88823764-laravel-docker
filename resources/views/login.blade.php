@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    @csrf
     <div class="container">
         <div class="prop">
             <div class="rectangle1">
