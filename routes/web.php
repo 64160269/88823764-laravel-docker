@@ -17,7 +17,8 @@ Route::get('/', function () {
     return view('loginhome');
 });
 
-Route::get('/login', [App\Http\Controllers\loginController::class, 'login'])->name('login');
+// Route::get('/login', [App\Http\Controllers\loginController::class, 'login'])->name('login');
+
 Route::get('/suphome', function () {
     return view('suphome');
 });
@@ -25,6 +26,9 @@ Route::get('/suphome', function () {
 Route::get('/userhome', function () {
     return view('userhome');
 });
-Route::get('/manahome', function () {
+
+Route::get('/managerhome', function () {
     return view('managerhome');
 });
+
+Route::POST('/login', [App\Http\Controllers\loginController::class, 'login'])->name('login');

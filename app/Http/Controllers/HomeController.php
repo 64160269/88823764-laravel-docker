@@ -32,12 +32,12 @@ class HomeController extends Controller
 
             else if (Auth::user()->emp_dep_id == 2)
             {
-                return view('managerhome');
+                return view('suphome');
             }
 
             else if (Auth::user()->emp_dep_id == 3)
             {
-                return view('managerhome');
+                return view('userhome');
             }
         }
     }

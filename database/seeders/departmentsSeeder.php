@@ -19,24 +19,24 @@ class departmentsSeeder extends Seeder
         $departments = [
             [
                 'dep_id' => 0,
-                'role' => 'manager',
+                'dep_role' => 'manager',
                 'created_at' =>  \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
                 'dep_id' => 0,
-                'role' => 'it_subport',
+                'dep_role' => 'it_subport',
                 'created_at' =>  \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
                 'dep_id' => 0,
-                'role' => 'user',
+                'dep_role' => 'user',
                 'created_at' =>  \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
         ];
-
+        
         foreach($departments as $departments)
         {
             DB::table('departments')->insert($departments);

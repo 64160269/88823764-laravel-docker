@@ -51,14 +51,16 @@ class LoginController extends Controller
         ]);
 
         if(auth()->attempt(array('email' => $input['email'],'password' => $input['password']))){
-            if(auth()->user()->emp_dep_id == 1){
+            if(auth()->users()->emp_dep_id == 1){
                 return view('managerhome');
-            }else{
-                return redirect()->route('home');
+            }else if(auth()->users()->emp_dep_id == 2){
+                return view('suphome');
+            }else if(auth()->users()->emp_dep_id == 3){
+                return view('userhome');
             }
-
+    
         }else{
-            return redirect()->route('login')->with('error',"name and password wrong.");
+            return redirect()->route('loginhome')->with('error',"name and password wrong.");
         }
     }
 }
