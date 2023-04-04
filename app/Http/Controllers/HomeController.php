@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+<<<<<<< HEAD
     /**
      * Create a new controller instance.
      *
@@ -42,3 +43,12 @@ class HomeController extends Controller
         }
     }
 }
+=======
+    public function show_home(Request $request){
+        $data['em'] = $request->email;
+        $data['pw'] = $request->password;
+
+        return view('Show', $data);
+    }};
+
+>>>>>>> e81599feff887396e90198461ed039c74da78093

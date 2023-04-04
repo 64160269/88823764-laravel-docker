@@ -11,6 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<<<<<<< HEAD
+=======
+    @csrf
+>>>>>>> e81599feff887396e90198461ed039c74da78093
     <div class="container">
         <div class="prop">
             <div class="rectangle1">
@@ -31,7 +35,11 @@
             <div class="login-text">
                 Log in
             </div>
+<<<<<<< HEAD
             <form method="POST" action="{{ route('login') }}">
+=======
+            <form method="POST" action="{{route('login')}}">
+>>>>>>> e81599feff887396e90198461ed039c74da78093
                 @csrf
                 <div class="username">
                     <br>Email<br>
