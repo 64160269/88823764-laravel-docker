@@ -16,7 +16,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('loginhome');
 });
 
 Route::post('/Show', [HomeController::class,'show_home'])->name('Show');
